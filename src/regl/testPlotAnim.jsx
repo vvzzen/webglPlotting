@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import createREGL from 'regl';
 import * as d3 from 'd3';
 
+//**Still pretty crap */
 const AnimatedReglPlot = () => {
   const reglRef = useRef(null);
   const [currentLayout, setCurrentLayout] = useState(0);
@@ -38,7 +39,14 @@ const AnimatedReglPlot = () => {
     }
 
     const layouts = [greenCircleLayout, blueNormalLayout];
-    const points = d3.range(numPoints).map(() => ({ tx: width / 2, ty: height / 2, colorEnd: [0, 0, 0] }));
+    const points = d3.range(numPoints).map(() => ({
+      sx: width / 2,
+      sy: height / 2,
+      tx: width / 2,
+      ty: height / 2,
+      colorStart: [0, 0, 0],
+      colorEnd: [0, 0, 0],
+    }));
 
     function animate(layout, points) {
       points.forEach(d => {

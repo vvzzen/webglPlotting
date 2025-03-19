@@ -32,7 +32,7 @@ const HelloWorld = () => {
         {/* <Plot2D /> */}
         {/* <WellFieldVisualization /> */}
         <TestPlot />
-        <TestPlotAnim />
+        {/* <TestPlotAnim /> */}
       </div>
     </>
   )

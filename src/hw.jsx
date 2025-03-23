@@ -9,6 +9,7 @@ import Plot2D from './d3fc/plot2D'
 // import TestPlot from './timeChart/testPlot'
 import TestPlot from './regl/testPlot'
 import TestPlotAnim from './regl/testPlotAnim'
+import TestPlotChart from './regl/testPlotChart'
 
 const HelloWorld = () => {
   const [toggle, setToggle] = useState(false);
@@ -44,10 +45,11 @@ const HelloWorld = () => {
         <WellFieldVisualization mapData={mapData} wellData={wellData} />
       </div> */}
       <div className='flex h-screen w-screen justify-center flex-wrap'>
-        <WellPlot2D />
-        <WellFieldVisualization mapData={mapData} wellData={wellData}/>
-        <TestPlot />
+        {/* <WellPlot2D />
+        <WellFieldVisualization mapData={mapData} wellData={wellData}/> */}
+        {/* <TestPlot /> */}
         {/* <TestPlotAnim /> */}
+        <TestPlotChart />
       </div>
     </>
   )

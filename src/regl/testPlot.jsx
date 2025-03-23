@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
 import REGL from "regl";
 import * as d3 from "d3";
-import frag from './testPlotFrag.glsl?raw';
-import vert from './testPlotVert.glsl?raw';
+import frag from './glsl/testPlotFrag.glsl?raw';
+import vert from './glsl/testPlotVert.glsl?raw';
 
 const ReglScatterPlot = () => {
   const canvasRef = useRef(null);
@@ -24,6 +24,7 @@ const ReglScatterPlot = () => {
       color: [Math.random(), Math.random(), Math.random()],
     }));
 
+    console.log(points);
     // Compile drawPoints function
     const drawPoints = regl({
       frag: frag,

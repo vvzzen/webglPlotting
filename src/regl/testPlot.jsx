@@ -1,8 +1,8 @@
 import { useRef, useEffect } from "react";
 import REGL from "regl";
 import * as d3 from "d3";
-import frag from './glsl/testPlotFrag.glsl?raw';
-import vert from './glsl/testPlotVert.glsl?raw';
+import frag from './glslShaders/testPlotFrag.glsl?raw';
+import vert from './glslShaders/testPlotVert.glsl?raw';
 
 const ReglScatterPlot = () => {
   const canvasRef = useRef(null);

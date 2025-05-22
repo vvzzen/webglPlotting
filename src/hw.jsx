@@ -2,14 +2,15 @@ import React from 'react';
 import './index.css';
 import {useState} from 'react'
 // import * as THREE from 'three'
-import WellFieldVisualization from './threeJS/wellPlot3D'
-import WellPlot2D from './threeJS/wellPlot2D'
-import Plot2D from './d3fc/plot2D'
+import WellFieldVisualization from './components/threeJS/wellPlot3D'
+import WellPlot2D from './components/threeJS/wellPlot2D'
+import WellPlot2D2 from './components/threeJS/wellPlot2D2'
+import Plot2D from './components/d3fc/plot2D'
 // import WellFieldVisualizationDeckGL from './deckgl'
 // import TestPlot from './timeChart/testPlot'
-import TestPlot from './regl/testPlot'
-import TestPlotAnim from './regl/testPlotAnim'
-import TestPlotChart from './regl/testPlotChart'
+import TestPlot from './components/regl/testPlot'
+import TestPlotAnim from './components/regl/testPlotAnim'
+import TestPlotChart from './components/regl/testPlotChart'
 
 const HelloWorld = () => {
   const [toggle, setToggle] = useState(false);
@@ -45,11 +46,12 @@ const HelloWorld = () => {
         <WellFieldVisualization mapData={mapData} wellData={wellData} />
       </div> */}
       <div className='flex h-screen w-screen justify-center flex-wrap'>
-        {/* <WellPlot2D />
-        <WellFieldVisualization mapData={mapData} wellData={wellData}/> */}
+        {/* <WellPlot2D /> */}
+        <WellPlot2D2 />
+        {/* <WellFieldVisualization mapData={mapData} wellData={wellData}/> */}
         {/* <TestPlot /> */}
         {/* <TestPlotAnim /> */}
-        <TestPlotChart />
+        {/* <TestPlotChart /> */}
       </div>
     </>
   )

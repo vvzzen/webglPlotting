@@ -1,9 +1,9 @@
 import React from 'react'
-import HelloWorld from './hw'
+import HelloWorld from './Hw'
 
 const App = () => {
   return (
-    <div className='text-center h-1/2 w-1/2'>
+    <div className='text-center h-full w-full'>
       App
       <HelloWorld />
     </div>
